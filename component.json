@@ -1,0 +1,23 @@
+{
+  "name": "textarea-field",
+  "repo": "mnmly/textarea-field",
+  "description": "Textarea field for segmentio/form",
+  "version": "0.0.1",
+  "keywords": ["form", "textarea", "ui"],
+  "dependencies": {
+    "segmentio/form": "*",
+    "component/inherit": "*"
+  },
+  "development": {
+    "component/assert": "*"
+  },
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": [
+    "index.js"
+  ],
+  "templates": [
+    "template.html"
+  ],
+  "remotes": []
+}

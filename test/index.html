@@ -1,0 +1,37 @@
+<html>
+<head>
+  <title>Form Test</title>
+  <link rel="stylesheet" href="mocha.css" />
+</head>
+<body>
+  <div id="mocha"></div>
+  <script src="mocha.js"></script>
+  <script>mocha.setup({ ui: 'bdd' });</script>
+  <script src="../build/build.js"></script>
+  <script src="form.js"></script>
+  <script>mocha.run();</script>
+  <script>
+    (function () {
+      var Form = require('form');
+      var TextareaField = require('textarea-field');
+
+      Form.field('textarea', TextareaField);
+
+      var form = new Form({ post: 'Fred is super awesome dude.\n\nRight?' });
+
+      form.field({
+        type: 'textarea',
+        name: 'post',
+        label: 'Post'
+      });
+
+      form.field({
+        type: 'submit',
+        name: 'submit',
+        label: 'Do it'
+      });
+      document.body.appendChild(form.el);
+    }());
+  </script>
+</body>
+</html>
